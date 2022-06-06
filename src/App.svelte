@@ -6,7 +6,7 @@
     switch (state) {
       case "add":
         total += parseFloat(outPut);
-        outPut += state;
+        outPut = "0";
         break;
       case "substract":
         total -= parseFloat(outPut);
