@@ -139,13 +139,14 @@
     width: 100%;
     height: 100vh;
     background-color: black;
-    overflow: hidden;
+    overflow: hidden !important;
   }
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
+    overflow: hidden;
   }
   .calculator {
     position: absolute;
@@ -156,15 +157,15 @@
     transform: translate(-50%, -50%);
     padding: 10px 10px;
     backdrop-filter: blur(16px);
-    border: 1px solid rgb(20, 20, 20);
+    border: 1px solid rgb(102, 102, 102);
   }
   #output {
     width: 100%;
     font-size: 26px;
-    font-family: cursive;
+    font-family: cursive, sans-serif;
     padding: 10px 20px;
     border: none;
-    border-bottom: 1px solid rgb(20, 20, 20);
+    border-bottom: 1px solid rgb(156, 156, 156);
     color: rgb(41, 58, 209);
     background-color: transparent;
   }
@@ -172,7 +173,7 @@
     width: 60px;
     height: 60px;
     font-size: 26px;
-    font-family: cursive;
+    font-family: cursive sans-serif;
     margin: 5px 5px;
     border: none;
     cursor: pointer;
@@ -185,22 +186,37 @@
   }
 
   #circle1 {
-    width: 80%;
-    height: 100%;
+    width: 900px;
+    height: 900px;
     border-radius: 50%;
     background: transparent linear-gradient(109deg, #55ecb2 0%, #2dd393 100%) 0%
       0% no-repeat padding-box;
     position: absolute;
-    top: -230px;
-    left: -300px;
+    top: -270px;
+    left: -100px;
   }
   #circle2 {
-    width: 60%;
-    height: 100%;
+    width: 900px;
+    height: 900px;
     border-radius: 50%;
     background: transparent linear-gradient(112deg, #b050d1 0%, #2b26a7 100%);
     position: absolute;
-    bottom: -230px;
-    right: -200px;
+    bottom: -350px;
+    right: -100px;
   }
+/* small phones from 0 to 480px */
+@media only screen and (max-width: 767px){
+  #circle1 {
+    width: 400px;
+    height: 400px;
+    top: -130px;
+    left: -130px;
+  }
+  #circle2 {
+    width: 500px;
+    height: 500px;
+    bottom: -300px;
+    right: -150px;
+  }     
+}
 </style>
