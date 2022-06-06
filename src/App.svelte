@@ -6,7 +6,7 @@
     switch (state) {
       case "add":
         total += parseFloat(outPut);
-        outPut = "0";
+        outPut += state;
         break;
       case "substract":
         total -= parseFloat(outPut);
@@ -51,7 +51,7 @@
   }
   function equal() {
     resolveState();
-    outPut = total;
+    outPut = total.toString();
     state = "equal";
   }
 </script>
